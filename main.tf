@@ -59,7 +59,7 @@ resource "aws_elb" "main_https" {
 
 // HTTP-HTTPS 
 
-resource "aws_elb" "main_http_https " {
+resource "aws_elb" "main_http_https" {
   name = "${var.elb_name}"
   subnets = ["${var.subnets}"]
   internal = "${var.elb_is_internal}"
