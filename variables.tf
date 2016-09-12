@@ -14,6 +14,7 @@ variable "elb_is_internal" {
 variable "elb_security_group" {}
 
 variable "subnets" {
+  type = "list"
   description = "List of subnets"
 }
 
