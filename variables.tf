@@ -13,17 +13,10 @@ variable "elb_is_internal" {
 
 variable "elb_security_group" {}
 
-variable "subnet_az1" {
-  description = "The subnet for AZ1"
+variable "subnets" {
+  description = "List of subnets"
 }
 
-variable "subnet_az2" {
-  description = "The subnet for AZ3"
-}
-
-variable "subnet_az3" {
-  description = "The subnet for AZ3"
-}
 
 variable "backend_port" {
   description = "The port the service on the EC2 instances listens on"

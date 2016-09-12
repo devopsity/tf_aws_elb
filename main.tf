@@ -6,7 +6,7 @@
 
 resource "aws_elb" "main" {
   name = "${var.elb_name}"
-  subnets = ["${var.subnet_az1}", "${var.subnet_az2}", "${var.subnet_az3}"]
+  subnets = ["${var.subnets}"]
   internal = "${var.elb_is_internal}"
   security_groups = ["${var.elb_security_group}"]
 
@@ -33,7 +33,7 @@ resource "aws_elb" "main" {
 
 resource "aws_elb" "main_https" {
   name = "${var.elb_name}"
-  subnets = ["${var.subnet_az1}", "${var.subnet_az2}", "${var.subnet_az3}"]
+  subnets = ["${var.subnets}"]
   internal = "${var.elb_is_internal}"
   security_groups = ["${var.elb_security_group}"]
 
@@ -59,9 +59,9 @@ resource "aws_elb" "main_https" {
 
 // HTTP-HTTPS 
 
-resource "aws_elb" "main_http_https" {
+resource "aws_elb" "main_http_https " {
   name = "${var.elb_name}"
-  subnets = ["${var.subnet_az1}", "${var.subnet_az2}", "${var.subnet_az3}"]
+  subnets = ["${var.subnets}"]
   internal = "${var.elb_is_internal}"
   security_groups = ["${var.elb_security_group}"]
 
