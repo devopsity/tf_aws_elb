@@ -61,6 +61,5 @@ variable lb_protocol { default = "" }
 variable hc_healthy_threshold { default = "2" }
 variable hc_unhealthy_threshold { default = "2" }
 variable hc_timeout { default = "5" }
-variable health_check_target {}
 variable hc_interval { default = "6" }
 variable cross_zone_load_balancing { default = true }
