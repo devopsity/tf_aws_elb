@@ -5,6 +5,7 @@
 
 // HTTP-HTTPS 
 
+
 resource "aws_elb" "main" {
   name = "${var.elb_name}"
   subnets = ["${var.subnets}"]
