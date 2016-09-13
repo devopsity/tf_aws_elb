@@ -36,4 +36,14 @@ resource "aws_elb" "main" {
   }
 
   cross_zone_load_balancing = "${var.cross_zone_load_balancing}"
+
+
+  tags {
+    Name = "elb-${var.region_code}-${var.env}"
+    region = "${var.region_code}"
+    env = "${var.env}"
+    environment = "${var.environment}"
+    team = "${var.team}"
+    deploytag = "${var.deploytag}"
+  }
 }

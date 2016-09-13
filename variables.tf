@@ -3,6 +3,14 @@
 ###############################################
 
 
+// Global
+variable "region" {}
+variable "region_code" {}
+variable "env" {}
+variable "environment" {}
+variable "team" {}
+variable "deploytag" {}
+
 variable "elb_name" {}
 
 variable "elb_is_internal" {
@@ -64,3 +72,4 @@ variable hc_unhealthy_threshold { default = "2" }
 variable hc_timeout { default = "5" }
 variable hc_interval { default = "6" }
 variable cross_zone_load_balancing { default = true }
+
